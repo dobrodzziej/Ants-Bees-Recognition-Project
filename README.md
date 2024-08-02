@@ -1,2 +1,2 @@
 # Ants-Bees-Recognition-Project
-Pytorch, ResNet34, Resnet50, MLFlow, augmented and broadened hymenoptera data
+Contains self-implemented ResNet34 and ResNet50 in pytorch used for binary classifier bees vs ants. Experiments are saved using MLFlow and results are evaluated

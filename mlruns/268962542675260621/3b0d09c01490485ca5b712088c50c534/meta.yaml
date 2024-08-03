@@ -1,0 +1,15 @@
+artifact_uri: file:///home/maciej/programming/machine_learning_book/Ants-Bees-Recognition-Project/mlruns/268962542675260621/3b0d09c01490485ca5b712088c50c534/artifacts
+end_time: 1721050025945
+entry_point_name: ''
+experiment_id: '268962542675260621'
+lifecycle_stage: active
+run_id: 3b0d09c01490485ca5b712088c50c534
+run_name: able-slug-430
+run_uuid: 3b0d09c01490485ca5b712088c50c534
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721045733773
+status: 3
+tags: []
+user_id: maciej

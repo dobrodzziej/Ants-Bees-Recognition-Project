@@ -1,0 +1,15 @@
+artifact_uri: file:///home/macwoj/playground/machine_learning_book/Ants-Bees-Recognition-Project/mlruns/268962542675260621/7a82d7325c37487e80829c6ec9e0ef96/artifacts
+end_time: 1721122666979
+entry_point_name: ''
+experiment_id: '268962542675260621'
+lifecycle_stage: active
+run_id: 7a82d7325c37487e80829c6ec9e0ef96
+run_name: honorable-ray-407
+run_uuid: 7a82d7325c37487e80829c6ec9e0ef96
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721119624429
+status: 3
+tags: []
+user_id: maciej

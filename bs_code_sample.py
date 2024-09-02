@@ -1,16 +1,3 @@
-def get_new_image_size(image: Image, desired_wh: int=500) -> tuple[int, int]:
-    w, h = image.size
-
-    if w > h:
-        new_w = desired_wh
-        new_h = int((desired_wh / w) * h)
-    else:
-        new_h = desired_wh
-        new_w = int((desired_wh / h) * w)
-    print(new_w, new_h)
-    return new_w, new_h
-
-
 class MyResNet34(nn.Module):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)

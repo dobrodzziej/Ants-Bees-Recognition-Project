@@ -1,0 +1,7 @@
+{
+    "experiment_name": "Ants Bees Recognition Project",
+    "rn34_run_name": "ResNet34_7augs", 
+    "rn50_run_name": "ResNet50_7augs", 
+    "computer": "lenovo",
+    "evaluation_dataset": "validation"
+}

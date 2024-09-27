@@ -1,1 +1,4 @@
 *.pth
+.venv
+mlruns
+__pycache__

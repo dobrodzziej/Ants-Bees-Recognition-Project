@@ -396,8 +396,8 @@ class TrainingSupervisor():
     def check_accuracy(self, loss_fn: nn.Module, dataloader: DataLoader, device: str, return_y_scores=False):
         num_all = len(dataloader.dataset)
         num_correct = 0
-        self.model.eval()
         if return_y_scores:
+            self.model.eval().to(device)
             y_scores = torch.zeros(num_all, 1).to(device)
             with torch.no_grad():
                 loss_sum = torch.zeros(len(dataloader)).to(device)
@@ -418,12 +418,13 @@ class TrainingSupervisor():
                     # print(f"y_pred: {y_pred.ravel()}")
                     # print(y.ravel())
                     # print(f"idx: {idx}, num_correct: {num_correct}")
-                loss_relative_sum = float(torch.sum(loss_sum).to("cpu")) / num_all
-                accuracy = float((num_correct / num_all * 100).to("cpu"))
+                loss_relative_sum = float(torch.sum(loss_sum)) / num_all
+                accuracy = float((num_correct / num_all * 100))
             self.model.train()
             return accuracy, loss_relative_sum, y_scores
         
         else:
+            self.model.eval().to(device)
             with torch.no_grad():
                 loss_sum = torch.zeros(len(dataloader)).to(device)
                 for idx, (X, y) in enumerate(dataloader):
@@ -437,8 +438,8 @@ class TrainingSupervisor():
                     # print(f"y_pred: {y_pred.ravel()}")
                     # print(y.ravel())
                     # print(f"idx: {idx}, num_correct: {num_correct}")
-                loss_relative_sum = float(torch.sum(loss_sum).to("cpu")) / num_all
-                accuracy = float((num_correct / num_all * 100).to("cpu"))
+                loss_relative_sum = float(torch.sum(loss_sum)) / num_all
+                accuracy = float((num_correct / num_all * 100))
             self.model.train()
             return accuracy, loss_relative_sum
 
